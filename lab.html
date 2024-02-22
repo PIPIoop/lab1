@@ -7,7 +7,7 @@
 
   <script>
     alert('Решение уравнение вида ax^2+bx+c=0')
-    let t = 0,t1 = 0, t2=0,a ,b,vixod = false
+    let t = 0,t1 = 0, t2=0,a ,b,vixod1 = false
 
     while (t!= 1){
     let a1 = prompt('Введи значения а',1)
@@ -15,56 +15,78 @@
 	if (a1 == null)
 	{
 		let vixod = confirm("Отменить ввод данных?")
-		if (vixod == true)
+		if (vixod == true){
+			vixod1=true
 			break
+	   }
 	}
     else if (a1 <= 0 || a1 > 0)
 	t = 1
 	else {
 	   let vixod = confirm("Введено некоректное значение, отменить ввод данных?")
-	   if (vixod == true)
+	   if (vixod == true){
+			vixod1=true
 			break
+	   }
 	}
              }
      
 
-
+    if (vixod1 == false){
     while (t1!= 1){
     let a1 = prompt('Введи значения b',1)
 	b=a1
 	if (a1 == null)
 	{
 		let vixod = confirm("Отменить ввод данных?")
-		if (vixod == true)
+		if (vixod == true){
+			vixod1=true
 			break
+	   }
 	}
     else if (a1 <= 0 || a1 > 0)
 	t1 = 1
 
 	else {
 	   let vixod = confirm("Введено некоректное значение, отменить ввод данных?")
-	   if (vixod == true)
+	   if (vixod == true){
+			vixod1=true
 			break
+	   }
 	}
              }
+                }
 
 
-
+    if (vixod1 == false){
     while (t2!= 1){
     let a1 = prompt('Введи значения c',1)
 	c=a1
-    if (a1 <= 0 || a1 > 0)
+    if (a1 == null)
+	{
+		let vixod = confirm("Отменить ввод данных?")
+		if (vixod == true){
+			vixod1=true
+			break
+	   }
+	}
+    else if (a1 <= 0 || a1 > 0)
 	t2 = 1
 
 	else {
 	   let vixod = confirm("Введено некоректное значение, отменить ввод данных?")
-	   if (vixod == true)
+	   if (vixod == true){
+			vixod1=true
 			break
+	   }
 	}
              }
+               }
+
+                
 
 
-
+    if (vixod1 == false){
     let d = (Number(b) ** 2 - 4 * Number(a) * Number(c))** 0.5
      
     if (a==0 && b!=a && c!=a){
@@ -84,7 +106,10 @@
 		     alert('Дискриминант отрицательный')
 
 	}
- 	
+ 	}
+ 	else
+ 		alert("<3")
+
 		
     
 	
