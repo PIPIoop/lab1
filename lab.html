@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+	
+
+  <script>
+    alert('Решение уравнение вида ax^2+bx+c=0')
+    let t = 0,t1 = 0, t2=0,a ,b,vixod = false
+
+    while (t!= 1){
+    let a1 = prompt('Введи значения а',1)
+	a=a1
+	if (a1 == null)
+	{
+		let vixod = confirm("Отменить ввод данных?")
+		if (vixod == true)
+			break
+	}
+    else if (a1 <= 0 || a1 > 0)
+	t = 1
+	else {
+	   let vixod = confirm("Введено некоректное значение, отменить ввод данных?")
+	   if (vixod == true)
+			break
+	}
+             }
+     
+
+
+    while (t1!= 1){
+    let a1 = prompt('Введи значения b',1)
+	b=a1
+	if (a1 == null)
+	{
+		let vixod = confirm("Отменить ввод данных?")
+		if (vixod == true)
+			break
+	}
+    else if (a1 <= 0 || a1 > 0)
+	t1 = 1
+
+	else {
+	   let vixod = confirm("Введено некоректное значение, отменить ввод данных?")
+	   if (vixod == true)
+			break
+	}
+             }
+
+
+
+    while (t2!= 1){
+    let a1 = prompt('Введи значения c',1)
+	c=a1
+    if (a1 <= 0 || a1 > 0)
+	t2 = 1
+
+	else {
+	   let vixod = confirm("Введено некоректное значение, отменить ввод данных?")
+	   if (vixod == true)
+			break
+	}
+             }
+
+
+
+    let d = (Number(b) ** 2 - 4 * Number(a) * Number(c))** 0.5
+     
+    if (a==0 && b!=a && c!=a){
+        alert(`${b}x + ${c} = 0`) 
+    	let x= c * (-1)/b
+    	alert (x)
+}
+       else if(b==0 && c==0)
+	   alert('0 = 0 всё правильно, решать нечего☹️')
+    	else if (d >=0){
+		alert (`${a}x^2 + ${b}x + ${c} = 0`)
+		let x1= (-b + d) / (2 * a)
+		let x2= (-b - d) / (2 * a)
+		alert (`${x1} и ${x2}`)
+	}
+		else{
+		     alert('Дискриминант отрицательный')
+
+	}
+ 	
+		
+    
+	
+  </script>
+
+
+
+</body>
+
+</html>
