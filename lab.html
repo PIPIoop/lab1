@@ -10,7 +10,7 @@
     let t = 0,t1 = 0, t2=0,a ,b,vixod1 = false
 
     while (t!= 1){
-    let a1 = prompt('Введи значения а',1)
+    let a1 = prompt('Введи значения а, при очистки строки, автоматическии введётся 0',1)
 	a=a1
 	if (a1 == null)
 	{
@@ -34,7 +34,7 @@
 
     if (vixod1 == false){
     while (t1!= 1){
-    let a1 = prompt('Введи значения b',1)
+    let a1 = prompt('Введи значения b, при очистки строки, автоматическии введётся 0',1)
 	b=a1
 	if (a1 == null)
 	{
@@ -60,7 +60,7 @@
 
     if (vixod1 == false){
     while (t2!= 1){
-    let a1 = prompt('Введи значения c',1)
+    let a1 = prompt('Введи значения c, при очистки строки, автоматическии введётся 0',1)
 	c=a1
     if (a1 == null)
 	{
@@ -96,19 +96,26 @@
 }
        else if(b==0 && c==0)
 	   alert('0 = 0 всё правильно, решать нечего☹️')
+		else if (b==0)
+			alert('Получится неравенство вида ${c} ≠ 0')
     	else if (d >=0){
-		alert (`${a}x^2 + ${b}x + ${c} = 0`)
-		let x1= (-b + d) / (2 * a)
-		let x2= (-b - d) / (2 * a)
-		alert (`${x1} и ${x2}`)
-	}
-		else{
-		     alert('Дискриминант отрицательный')
-
-	}
+			alert (`${a}x^2 + ${b}x + ${c} = 0`)
+			let x1= (-b + d) / (2 * a)
+			let x2= (-b - d) / (2 * a)
+			alert (`x1 = ${x1} и x2 = ${x2}`)
+		}
+		else
+		{	
+			alert (`${a}x^2 + ${b}x + ${c} = 0
+решение уравнения с с комплексными корнями`)
+		 	let dk = (Math.abs(Number(b) ** 2 - 4 * Number(a) * Number(c)))**0.5/(2*a);
+		 	let b2= -b/(2*a)
+		 	alert(`X1= ${b2} + ${dk}i 
+X2= ${b2} - ${dk}i`)
+		}
  	}
  	else
- 		alert("<3")
+ 		alert("Вы отменили ввод")
 
 		
     
